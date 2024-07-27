@@ -78,25 +78,24 @@
           <span id="prev"><i class="ri-arrow-left-line"></i></span>
           <span id="next"><i class="ri-arrow-right-line"></i></span>
         </div> -->
-      </div>
-      @foreach ($obats as $key => $obat)
-      <div class="doctors__wrapper">
+        </div>
+        <div class="doctors__wrapper">
         <div class="doctors__grid" id="doctorsGrid">
-          <!-- Repeat this block for more doctors -->
+          @foreach ($obats as $key => $obat)
           <div class="doctors__card">
             <a href="{{ route('show', $obat->id) }}">
-            <div class="doctors__card__image">
+              <div class="doctors__card__image">
                 @if ($obat->foto_obat)
-                <img src="{{ asset($obat->foto_obat) }}" class="img-thumbnail" width="100px" height="auto" alt="Foto Obat">
-            @else
+                <img src="{{ asset($obat->foto_obat) }}" class="img-thumbnail" alt="Foto Obat">
+                @else
                 <p>No Image</p>
-            @endif
-            </div>
-            <h4>{{ $obat->nama_obat }}</h4>
-            <p class="truncated-text">{{ $obat->deskripsi_obat }}</p>
-          </div></a>     
-      @endforeach
-          <!-- Add more doctor cards here -->
+                @endif
+              </div>
+              <h4>{{ $obat->nama_obat }}</h4>
+              <p>{{ $obat->deskripsi_obat }}</p>
+            </a>
+          </div>
+          @endforeach
         </div>
       </div>
     </section>
@@ -110,7 +109,7 @@
         </p>
         </div>
         <div class="footer__col">
-          <h4>aNavigasi</h4>
+          <h4>Navigasi</h4>
           <p>Beranda</p>
           <p>Tentang Kami</p>
           <p><a href="{{ route("Service") }}" style="color: inherit;text-decoration: none;">Layanan</a></p>

@@ -19,6 +19,7 @@
     <link href="./dist/css/tabler-payments.min.css?1692870487" rel="stylesheet"/>
     <link href="./dist/css/tabler-vendors.min.css?1692870487" rel="stylesheet"/>
     <link href="./dist/css/demo.min.css?1692870487" rel="stylesheet"/>
+    <link rel="icon" href="/dist/img/Carefy/carefy.jpg" type="image/png">
     <style>
       @import url('https://rsms.me/inter/inter.css');
       :root {
@@ -130,9 +131,9 @@
             </div>
             <div class="nav-item dropdown">
               <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
-                <span class="avatar avatar-sm" style="background-image: url(/dist/img/Carefy/carefy.jpg)"></span>
+                <span class="avatar" style="background-image: url(/dist/img/Carefy/carefy.jpg)"></span>
                 <div class="d-none d-xl-block ps-2">
-                  <div>UKS</div>
+                  <div>Skormed</div>
                   {{-- <div class="mt-1 small text-secondary">UI Designer</div> --}}
                 </div>
               </a>
@@ -174,10 +175,20 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{{ route("riwayat.index") }}" >
                     <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
-                      <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-history"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 8l0 4l2 2" /><path d="M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5" /></svg>
+                      <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-users"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
                     </span>
                       <span class="nav-link-title">
-                      Riwayat
+                     Pasien
+                    </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/pengajuan" >
+                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                      <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail-forward"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5" /><path d="M3 6l9 6l9 -6" /><path d="M15 18h6" /><path d="M18 15l3 3l-3 3" /></svg>
+                    </span>
+                    <span class="nav-link-title">
+                      Pengajuan
                     </span>
                   </a>
                 </li>

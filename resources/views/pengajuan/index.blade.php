@@ -173,25 +173,25 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route("riwayat.index") }}" >
-                      <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                  <a class="nav-link" href="{{ route("riwayat.index") }}" >
+                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
                         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-users"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
-                      </span>
-                        <span class="nav-link-title">
-                        Pasien
-                      </span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/pengajuan" >
-                      <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
-                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail-forward"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5" /><path d="M3 6l9 6l9 -6" /><path d="M15 18h6" /><path d="M18 15l3 3l-3 3" /></svg>
-                      </span>
+                    </span>
                       <span class="nav-link-title">
-                        Pengajuan
-                      </span>
-                    </a>
-                  </li>
+                      Pasien
+                    </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/pengajuan" >
+                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                      <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail-forward"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5" /><path d="M3 6l9 6l9 -6" /><path d="M15 18h6" /><path d="M18 15l3 3l-3 3" /></svg>
+                    </span>
+                    <span class="nav-link-title">
+                      Pengajuan
+                    </span>
+                  </a>
+                </li>
               </ul>
               <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
                <form action="{{ route('obats.index') }}" method="GET" autocomplete="off" novalidate>
@@ -215,12 +215,12 @@
       </header>
       <div class="page-wrapper">
         <!-- Page header -->
-        <div class="page-header d-print-none">
+        {{-- <div class="page-header d-print-none">
           <div class="container-xl">
             <div class="row g-2 align-items-center">
               <div class="col">
                 <h2 class="page-title">
-                    <a href="{{ route('riwayat.create') }}" class="btn btn-primary d-none d-sm-inline-block">
+                    <a href="{{ route('obats.create') }}" class="btn btn-primary d-none d-sm-inline-block">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
                         New report
                       </a>
@@ -228,46 +228,46 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
         <!-- Page body -->
         <div class="page-body">
           <div class="container-xl">
               <div class="col-12">
                   <div class="card">
                       <div class="table-responsive">
-                          <table class="table table-vcenter table-mobile-md card-table">
-                              <thead>
-                                  <tr>
-                                      <th class="w-1">No.</th>
-                                      <th>Nama Siswa</th>
-                                      <th>Keterangan</th>
-                                      <th>Obat</th>
-                                      <th>Tanggal Kadaluarsa</th>
-                                      <th>Action</th>
-                                  </tr>
-                              </thead>
-                              <tbody>
-                                  @foreach ($riwayats as $riwayat)
-                                  <tr>
-                                      <td>{{ ++$loop->index }}</td>
-                                      <td>{{ $riwayat->nama_siswa }}</td>
-                                      <td>{{ $riwayat->keterangan }}</td>
-                                      <td>{{ optional($riwayat->obat)->nama_obat ?? 'Tidak ada obat' }}</td>
-                                      <td>{{ $riwayat->tanggal_kadaluarsa }}</td>
-                                      <td>
-                                          <div class="btn-list flex-nowrap">
-                                              <a href="{{ route('riwayat.edit', $riwayat->id) }}" class="btn">Edit</a>
-                                              <form action="{{ route('riwayat.destroy', $riwayat->id) }}" method="POST">
-                                                  @csrf
-                                                  @method('DELETE')
-                                                  <button type="submit" class="btn" onclick="return confirm('Are you sure you want to delete this obat?')">Delete</button>
-                                              </form>
-                                          </div>
-                                      </td>
-                                  </tr>
-                                  @endforeach
-                              </tbody>
-                          </table>
+                        <table class="table table-vcenter table-mobile-md card-table">
+                            <thead>
+                                <tr>
+                                    <th class="w-1">No.</th>
+                                    <th>Nama Siswa</th>
+                                    <th>Kelas Siswa</th>
+                                    <th>Obat</th>
+                                    <th>Keterangan</th>
+                                    {{-- <th>Action</th> --}}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($pengajuans as $key => $pengajuan)
+                                <tr>
+                                    <td>{{ $key + 1 }}</td>
+                                    <td>{{ $pengajuan->nama }}</td>
+                                    <td>{{ $pengajuan->kelas }}</td>
+                                    <td>{{ $pengajuan->obat ? $pengajuan->obat->nama_obat : 'No Obat' }}</td>
+                                    <td>{{ $pengajuan->keterangan }}</td>
+                                    {{-- <td>
+                                        <div class="btn-list flex-nowrap">
+                                            <a href="{{ route('pengajuan.edit', $pengajuan->id) }}" class="btn">Edit</a>
+                                            <form action="{{ route('pengajuan.destroy', $pengajuan->id) }}" method="POST" style="display:inline;">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn" onclick="return confirm('Are you sure you want to delete this pengajuan?')">Delete</button>
+                                            </form>
+                                        </div>
+                                    </td> --}}
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
                       </div>
                   </div>
               </div>

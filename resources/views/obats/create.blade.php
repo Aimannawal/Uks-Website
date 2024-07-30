@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Obat Baru</title>
+    <link rel="icon" href="/dist/img/Carefy/carefy.jpg" type="image/png">
     <style>
         body {
             font-family: Arial, sans-serif;

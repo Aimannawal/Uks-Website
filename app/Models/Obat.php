@@ -21,4 +21,9 @@ class Obat extends Model
     {
         return $this->hasMany(Riwayat::class);
     }
+
+    public function pengajuans()
+    {
+        return $this->hasMany(Pengajuan::class);
+    }
 }

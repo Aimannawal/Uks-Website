@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Obat</title>
+    <link rel="icon" href="/dist/img/Carefy/carefy.jpg" type="image/png">
     <style>
         /* Mengimpor font Poppins dari Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');

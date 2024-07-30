@@ -11,14 +11,17 @@ class ObatController extends Controller
     public function index(Request $request)
     {
         $search = $request->get('search');
+    
         $obats = Obat::when($search, function ($query, $search) {
                 return $query->where('nama_obat', 'like', "%{$search}%")
                              ->orWhere('deskripsi_obat', 'like', "%{$search}%");
             })
+            ->orderBy('created_at', 'desc') // Optional: to ensure results are sorted
             ->paginate(10);
-
-        return view('obats.index', compact('obats'));
+    
+        return view('obats.index', compact('obats', 'search'));
     }
+    
 
     public function create()
     {

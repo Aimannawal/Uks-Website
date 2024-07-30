@@ -4,7 +4,7 @@
   --primary-color: #3FA2F6;
   --primary-color-dark: #0d846c;
   --primary-color-light: #e9f7f7;
-  --secondary-color: #0F67B1;
+  --secondary-color: #007bff;
   --text-dark: #333333;
   --text-light: #767268;
   --white: #ffffff;
@@ -60,7 +60,11 @@ body {
   rgba(42, 131, 214, 0.9)
 ), */
 header {
-  background-image:
+  background-image: linear-gradient(
+      to right,
+      rgba(42, 109, 194, 0.7),
+      rgba(42, 131, 214, 0.9)
+    ),
     url("assets/headers.jpg");
   background-position: center center;
   background-size: cover;

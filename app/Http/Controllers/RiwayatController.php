@@ -10,9 +10,10 @@ class RiwayatController extends Controller
 {
     public function index()
     {
-        $riwayats = Riwayat::all();
+        $riwayats = Riwayat::orderBy('created_at', 'desc')->get();
         return view('Riwayat.index', compact('riwayats'));
     }
+    
 
     public function create()
     {

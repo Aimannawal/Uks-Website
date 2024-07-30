@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styless.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <title>Web Design Mastery | HealthCare</title>
+    <link rel="icon" href="/dist/img/Carefy/carefy.jpg" type="image/png">
     <style>
          /* Search form styling */
 .search-form {
@@ -42,15 +43,14 @@
   <body>
     <header>
       <nav class="section__container nav__container">
-        <div class="nav__logo">Health<span>Care</span></div>
-        <ul class="nav__links">
-          <li class="link"><a href="{{ route("Landingpage") }}">Beranda</a></li>
-          <li class="link"><a href="#1">Tentang Kami</a></li>
-          <li class="link"><a href="#2">Services</a></li>
-          <li class="link"><a href="#">Blog</a></li>
-        </ul>
+          <div class="nav__logo">Skormed</div>
+          <ul class="nav__links">
+              <li class="link"><a href="/">Beranda</a></li>
+              <li class="link"><a href="{{ route('Service') }}">Obat</a></li>
+              <li class="link"><a href="/Mengajukan">Pengajuan</a></li>
+          </ul>
       </nav>
-    </header>
+  </header>
 
     <section class="section__container doctors__container" id="2">
       <div class="doctors__header">
@@ -76,6 +76,7 @@
               </div>
               <h4>{{ $obat->nama_obat }}</h4>
               <p>{{ $obat->deskripsi_obat }}</p>
+              <p>Stok : {{ $obat->stok }}</p>
             </a>
           </div>
           @endforeach
@@ -85,31 +86,44 @@
 
     <footer class="footer">
       <div class="section__container footer__container">
-        <div class="footer__col">
-          <h3>Health<span>Care</span></h3>
-          <p>Kami juga menyediakan lingkungan yang aman, nyaman, dan ramah anak di mana siswa Anda dapat merasa tenang dan nyaman saat menerima perawatan. Klinik kami dilengkapi dengan teknologi medis terbaru dan staf kami dilatih secara menyeluruh untuk memberikan layanan kesehatan berkualitas tinggi dengan penuh empati dan perhatian.</p>
-        </div>
-        <div class="footer__col">
-          <h4>Navigasi</h4>
-          <p><a href="{{ route("Landingpage") }}" style="color: inherit;text-decoration: none;">Beranda</a></p>
-          <p>Tentang Kami</p>
-          <p>Layanan</p>
-          <p>Blog</p>
-          <p>Terms & Conditions</p>
-        </div>
-        <div class="footer__col">
-          <h4>Contact Us</h4>
-          <p>
-            <i class="ri-map-pin-2-fill"></i> SMK TELKOM SIDOARJO Jl. Raya Pecantingan, SEKARDANGAN TIMUR, Kec. Sidoarjo, Kab. Sidoarjo Prov. Jawa Timur.
-          </p>
-        </div>
+          <div class="footer__col">
+              <h3>Skormed</h3>
+              <p>
+                  Kami juga menyediakan lingkungan yang aman, nyaman, dan ramah anak di mana siswa Anda dapat merasa tenang dan nyaman saat menerima perawatan.
+              </p>
+              <p>
+                  Klinik kami dilengkapi dengan teknologi medis terbaru dan staf kami dilatih secara menyeluruh untuk memberikan layanan kesehatan berkualitas tinggi dengan penuh empati dan perhatian.
+              </p>
+          </div>
+          <div class="footer__col">
+              <h4>Navigasi</h4>
+              <p><a href="{{ route('Landingpage') }}" style="color: inherit;text-decoration: none;">Beranda</a></p>
+              <p><a href="{{ route('Service') }}" style="color: inherit;text-decoration: none;">Obat</a></p>
+              <p><a href="/Mengajukan" style="color: inherit;text-decoration: none;">Pengajuan</a></p>
+          </div>
+          <div class="footer__col">
+              <h4>Layanan</h4>
+              <p>Search Terms</p>
+              <p>Advance Search</p>
+              <p>Privacy Policy</p>
+              <p>Suppliers</p>
+              <p>Our Stores</p>
+          </div>
+          <div class="footer__col">
+              <h4>Contact Us</h4>
+              <p>
+                  <i class="ri-map-pin-2-fill"></i> SMK TELKOM SIDOARJO Jl. Raya Pecantingan, SEKARDANGAN TIMUR, Kec. Sidoarjo, Kab. Sidoarjo Prov. Jawa Timur.
+              </p>
+              <p><i class="ri-mail-fill"></i> support@care.com</p>
+              <p><i class="ri-phone-fill"></i> +62 851-7303-4717 </p>
+          </div>
       </div>
       <div class="footer__bar">
-        <div class="footer__bar__content">
-          <p>Copyright © 2024 Aiman Wafi'i An Nawal. Kelompok 3.</p>
-        </div>
+          <div class="footer__bar__content">
+              <p>Copyright © 2024 Aiman Wafi'i An Nawal. Kelompok 3.</p>
+          </div>
       </div>
-    </footer>
+  </footer>
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,20 +1,26 @@
 <?php
 
 use App\Http\Controllers\LandingpageController;
+use App\Http\Controllers\MintaController;
 use App\Http\Controllers\ObatController;
+use App\Http\Controllers\PengajuanController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RiwayatController;
 use App\Http\Controllers\ServiceController;
+use App\Models\Pengajuan;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/obat/{id}', [ObatController::class, 'show'])->name('show');
 Route::get('/Service', [ServiceController::class, 'index'])->name('Service');
+Route::get('/Mengajukan', [MintaController::class, 'index'])->name('Mengajukan');
 Route::get('/', [LandingpageController::class, 'index'])->name('Landingpage');
 Route::get('/dashboard', [ObatController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/services', [ServiceController::class, 'index'])->name('service.index');
 Route::get('/services/{id}', [ServiceController::class, 'show'])->name('showw');
 Route::resource('obats', ObatController::class)->middleware(['auth', 'verified']);
 Route::resource('riwayat', RiwayatController::class)->middleware(['auth', 'verified']);
+Route::resource('Mengajukan', MintaController::class);
+Route::resource('pengajuan', PengajuanController::class);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
